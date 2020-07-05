@@ -1,0 +1,26 @@
+$clr-body: #ECEFF1;
+$clr-flash: #8ABE06;
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $clr-body;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+a {
+    color: $clr-flash;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

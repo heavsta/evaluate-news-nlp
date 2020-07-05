@@ -1,0 +1,18 @@
+$clr-flash: #8ABE06;
+$clr-body: #ECEFF1;
+
+header {
+    text-align: center;
+    padding: 10px 40px;
+    background-color: #28384E;
+    h1 {
+        font-size: 3em;
+        color: $clr-flash;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+    }
+    p {
+        color: $clr-body;
+        padding-bottom: 5px;
+    }
+}

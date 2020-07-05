@@ -1,0 +1,11 @@
+$clr-body: #ECEFF1;
+
+footer {
+    background-color: #28384E;
+    display: flex;
+    justify-content: space-between;
+    p {
+        padding: 10px;
+        color: $clr-body;
+    }
+}
