@@ -1,3 +1,5 @@
+import { response } from "express"
+
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -23,14 +25,15 @@ function handleSubmit(event) {
             }catch(error) {
                 console.log("error", error)
             }
-
-            // update UI
-            .then( (response) => updateUI())
         }
+
+        // update UI
+        updateUI(response)
 
     }else {
         alert('Please enter a correct text')
     }
 }
+
 
 export { handleSubmit }
