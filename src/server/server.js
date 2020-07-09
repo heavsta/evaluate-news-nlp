@@ -43,18 +43,14 @@ var textapi = new AYLIENTextAPI({
 });
 
 //Post Route using Sentiment Analysis
-app.post('/sentiment', getSentiment);
-
-function getSentiment(req, res) {
-    textapi.sentiment(
-        {
-            text: req.body.text,
-        }, 
-        function(error, response) {
+app.post('/sentiment', function(req, res) {
+    textapi.sentiment({
+        'text': req.body.text
+    }, function(error, response) {
         if (error === null) {
             console.log('Server Response:' + response);
             res.send(response); 
             }
-        }
-    );
-};
+        } 
+    )
+})

@@ -1,5 +1,6 @@
 //JS imports
 import { handleSubmit } from './js/formHandler'
+import { postRequest } from './js/postRequest'
 
 //SASS imports
 import './styles/resets.scss'
@@ -10,5 +11,6 @@ import './styles/header.scss'
 
 //JS exports
 export {
-    handleSubmit
+    handleSubmit,
+    postRequest
 }
