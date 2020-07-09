@@ -12,7 +12,6 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
-    externals: ["fs"],
     module: {
         rules: [
             {

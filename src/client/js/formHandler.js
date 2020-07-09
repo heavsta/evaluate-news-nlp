@@ -1,39 +1,21 @@
-import { response } from "express"
-
 function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
     // check what text was put into the form field
-    let formText = document.getElementById('text').value
-    if(Client.inputChecker(formText)) {
-        let validInput = {text: formText}
+    let formText = document.getElementById('text').value;
+    Client.checkForName(formText); //will replace with checkForInput in the future
 
-        // api call
-        const postData = async (url='https://localhost:8081/sentiment', validInput) => {
-            console.log(validInput)
-            const response = await fetch(url, {
-                method: 'POST',
-                credentials: 'same-origin',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(validInput) //body data type must match "Content-Type" header
-            })
-            try {
-                const sentiment = await response.json()
-                return sentiment
-            }catch(error) {
-                console.log("error", error)
-            }
-        }
+    console.log("::: Form Submitted :::");
+    let validInput = { text: formText };
 
-        // update UI
-        updateUI(response)
+    //API CALL Sentiment
+    Client.postRequest('http://localhost:8081/sentiment', validInput)
 
-    }else {
-        alert('Please enter a correct text')
-    }
+    //Update UI
+    .then( (res) => {
+        document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`;
+        document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`;
+    });
 }
-
 
 export { handleSubmit }

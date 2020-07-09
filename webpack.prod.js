@@ -15,7 +15,6 @@ module.exports = {
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCssAssetsPlugin({})]
     },
-    externals: ["fs"],
     module: {
         rules: [
             {
@@ -35,5 +34,5 @@ module.exports = {
             filename: "./index.html",
         }),
         new MiniCssExtractPlugin({filename: '[name].css'})
-    ],
+    ]
 }

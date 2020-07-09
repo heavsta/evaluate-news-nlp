@@ -1,22 +1,14 @@
-import { checkForInput } from './js/inputChecker';
+//JS imports
 import { handleSubmit } from './js/formHandler'
-import { updateUI } from './js/updateUI';
 
-console.log(checkForInput);
-
-
-// importing sass files
+//SASS imports
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-
-// exporting js files
-
+//JS exports
 export {
-    checkForInput,
-    handleSubmit,
-    updateUI
+    handleSubmit
 }
