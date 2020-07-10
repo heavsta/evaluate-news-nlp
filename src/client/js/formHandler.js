@@ -4,7 +4,9 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('text').value
 
-    console.log("::: Form Submitted :::")
+    
+    if(Client.checkForInput(formText)) {
+        console.log("::: Form Submitted :::")
     let validInput = { text: formText }
 
     //API CALL Sentiment
@@ -14,6 +16,9 @@ function handleSubmit(event) {
     .then( res=>{
         updateUI(res)
     })
+    } else {
+        alert('Please make sure that your URL is valid, or that your message is longer than 2 characters')
+    }
 }
 
 const updateUI = async(res) => {
