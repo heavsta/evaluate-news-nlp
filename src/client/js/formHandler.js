@@ -11,13 +11,13 @@ function handleSubmit(event) {
     Client.postRequest('http://localhost:8081/sentiment', validInput)
 
     //Update UI
-    .then( updateUI())
+    .then( res=>{
+        updateUI(res)
+    })
 }
 
-const updateUI = async() => {
-    const req = await fetch ('/sentiment')
+const updateUI = async(res) => {
     try {
-        const sentiment = await req.json()
         document.getElementById('polarity').innerHTML = `Polarity: ${res.polarity}`
         document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`
     } catch(error) {
