@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594554472974" clover="3.2.0">
-  <project timestamp="1594554472974" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1594562222574" clover="3.2.0">
+  <project timestamp="1594562222575" name="All files">
+    <metrics statements="13" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0" elements="18" coveredelements="1" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
+    <file name="formHandler.js" path="/home/heavsta/Documents/Udacity/NLP/src/client/js/formHandler.js">
+      <metrics statements="13" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="2" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+    </file>
   </project>
 </coverage>
