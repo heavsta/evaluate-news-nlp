@@ -16,12 +16,12 @@ We will be using the [Aylien API](https://aylien.com/) during this project. My c
 If you wish to run the app you will need to [sign up](https://developer.aylien.com/signup) and ask for an API key
 Once this is done, create the `.env` file and write so:
 ```
-API_ID=*yourApiID*
-API_KEY=*yourApiKey*
+API_ID=yourApiID
+API_KEY=yourApiKey
 ```
 
 ## Installation
-1. Install all dependencies from 'package.json' by running `npm install` in command line
+To install all the dependencies : `npm i`
 
 ## Running
 1. `npm run build-prod` to build production files
